@@ -1,0 +1,114 @@
+.menu-btn {
+	display: inline-block;
+	height: 50px;
+	width: 45px;
+	position: relative;
+	border-radius: 5px;
+	transition: all 1s;
+
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+	position: absolute;
+	height: 2px;
+	width: 20px;
+	top: 50%;
+	margin-top: -1px;
+	left:50%;
+	margin-left: -10px;
+	background-color: #fff;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+	content: '';
+	display: block;
+	transition: .5s;
+}
+.menu-btn:hover{
+	background: rgba(255,255,255,0.3);
+}
+.menu-btn span::before {
+	transform: translateY(-7px);
+}
+.menu-btn span::after {
+	transform: translateY(7px);
+}
+.menu-btn_active span {
+	width: 20px;
+	transform-origin: left bottom;
+}
+
+.menu-btn_active span:after {
+	transform: rotate(45deg);
+	width: 15px;
+	margin-left: -13px;
+	margin-top: -1.6px;
+	transform-origin: left bottom;
+}
+.menu-btn_active span:before {
+	transform: rotate(-45deg);
+	width: 15px;
+	margin-left: -11.7px;
+	margin-top: 0.px;
+	transform-origin: left bottom;
+}
+.menu-block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.menu-nav_link {
+	display: inline-block;
+	margin: 0 5px;
+	color: white; 
+	text-decoration: none;
+	-webkit-transition: all .6s;
+	-o-transition: all .6s;
+	transition: all .6s;
+	transition-delay: .3s;
+}
+.menu-nav_link:hover {
+	text-decoration: none;
+}
+.menu-nav a::before{
+	content:"";
+	position: absolute;
+	width: 00%;
+	height: 2px;
+	background: white;
+	right: 0;
+	bottom: 0;
+	-webkit-transition: all .6s;
+	-o-transition: all .6s;
+	transition: all .6s;
+}
+.menu-nav a:hover{
+	color: green;
+}
+.menu-nav a:hover:before{
+	width: 100%;
+	left: 0;
+}
+.menu-nav {
+	transition: 1.5s;
+	transform-origin: right center;
+	transform: scaleX(0) translateX(00%);
+	opacity: 0;
+}
+.menu-nav a{
+	position: relative;
+}
+.menu-nav_active {
+	transform: scaleX(1) translateX(00%);
+	opacity: 1;
+}
+.span-block{
+	opacity: 0;
+}
