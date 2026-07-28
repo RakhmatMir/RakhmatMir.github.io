@@ -3,78 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rakhmat — Frontend Developer из Fergana, Uzbekistan. Портфолио проектов на HTML, CSS, JavaScript." />
-  <title>Rakhmat — Frontend Developer</title>
+  <meta name="description" content="Rakhmat — Frontend & Automation Developer. Websites, Telegram bots, TMA, AI, automation. Fergana, Uzbekistan." />
+  <title>Rakhmat — Frontend & Automation Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/portfolio.css" />
 </head>
-<body>
+<body class="lang-ru">
   <header class="header">
     <nav class="nav container">
       <a class="logo" href="#home">Rakhmat</a>
-      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#about">Обо мне</a></li>
-        <li><a href="#skills">Навыки</a></li>
-        <li><a href="#projects">Проекты</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
+      <div class="nav-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="nav.about">Обо мне</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Навыки</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Проекты</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
       <div class="container hero-inner">
-        <p class="hero-label">Frontend Developer</p>
-        <h1>Привет, я <span>Rakhmat</span></h1>
-        <p class="hero-text">
-          Разрабатываю адаптивные сайты и landing page на HTML, CSS и JavaScript.
+        <p class="hero-label" data-i18n="hero.label">Frontend & Automation Developer</p>
+        <h1><span data-i18n="hero.greeting">Привет, я</span> <span class="accent">Rakhmat</span></h1>
+        <p class="hero-text" data-i18n="hero.text">
+          Создаю сайты, Telegram-ботов, Mini Apps (TMA), автоматизацию и решения с AI.
           Открыт к работе и новым проектам.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Смотреть проекты</a>
+          <a class="btn btn-primary" href="#projects" data-i18n="hero.cta">Смотреть проекты</a>
+          <a class="btn btn-outline" href="https://t.me/Rmirzaev" target="_blank" rel="noopener noreferrer">Telegram</a>
           <a class="btn btn-outline" href="https://github.com/RakhmatMir" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
-        <p class="hero-location">📍 Fergana, Uzbekistan</p>
+        <p class="hero-location">📍 Fergana, Uzbekistan · <a href="https://t.me/Rmirzaev">@Rmirzaev</a></p>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="container">
-        <h2 class="section-title">Обо мне</h2>
-        <p class="section-text">
-          Я frontend-разработчик с опытом вёрстки landing page и учебных проектов.
-          Умею создавать адаптивные интерфейсы, работать с Flexbox, формами и GitHub Pages.
-          Сейчас развиваюсь в современном frontend-стеке и ищу возможности для практики и работы.
+        <h2 class="section-title" data-i18n="about.title">Обо мне</h2>
+        <p class="section-text" data-i18n="about.text">
+          Разрабатываю сайты и landing page (HTML, CSS, JavaScript), Telegram-ботов и Mini Apps (TMA),
+          автоматизирую публикации в Telegram и на сайтах. Работаю с AI-агентами, AI-видео и контентом
+          для соцсетей. Создаю системы учёта, расходов и отчётности. Умею работать в команде.
         </p>
       </div>
     </section>
 
     <section class="section section-alt" id="skills">
       <div class="container">
-        <h2 class="section-title">Навыки</h2>
+        <h2 class="section-title" data-i18n="skills.title">Навыки</h2>
         <div class="skills-grid">
           <article class="skill-card">
-            <h3>HTML5</h3>
-            <p>Семантическая разметка, формы, доступность</p>
+            <h3 data-i18n="skills.web.title">Web-разработка</h3>
+            <p data-i18n="skills.web.desc">HTML5, CSS3, JavaScript, адаптивная вёрстка, GitHub Pages</p>
           </article>
           <article class="skill-card">
-            <h3>CSS3</h3>
-            <p>Flexbox, Grid, адаптивная вёрстка, анимации</p>
+            <h3 data-i18n="skills.telegram.title">Telegram & TMA</h3>
+            <p data-i18n="skills.telegram.desc">Telegram-боты, Mini Apps, карточки для продаж, ведение каналов</p>
           </article>
           <article class="skill-card">
-            <h3>JavaScript</h3>
-            <p>DOM, интерактивность, базовая логика на клиенте</p>
+            <h3 data-i18n="skills.automation.title">Автоматизация</h3>
+            <p data-i18n="skills.automation.desc">Автопостинг в Telegram и на сайтах, рабочие процессы</p>
           </article>
           <article class="skill-card">
-            <h3>Git & GitHub</h3>
-            <p>Версионирование, GitHub Pages, портфолио</p>
+            <h3 data-i18n="skills.ai.title">AI & Контент</h3>
+            <p data-i18n="skills.ai.desc">AI-агенты, AI-видео, статьи и контент для соцсетей</p>
+          </article>
+          <article class="skill-card">
+            <h3 data-i18n="skills.business.title">Бизнес-системы</h3>
+            <p data-i18n="skills.business.desc">Учёт и расходы, отчётность, программы для отчётов</p>
+          </article>
+          <article class="skill-card">
+            <h3 data-i18n="skills.team.title">Работа в команде</h3>
+            <p data-i18n="skills.team.desc">Совместная разработка, коммуникация с заказчиком</p>
           </article>
         </div>
       </div>
@@ -82,54 +97,48 @@
 
     <section class="section" id="projects">
       <div class="container">
-        <h2 class="section-title">Проекты</h2>
-        <p class="section-subtitle">Избранные работы — live demo на GitHub Pages</p>
+        <h2 class="section-title" data-i18n="projects.title">Проекты</h2>
+        <p class="section-subtitle" data-i18n="projects.subtitle">Избранные работы — live demo на GitHub Pages</p>
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-badge">Landing Page</div>
             <h3>Project 1</h3>
-            <p>Адаптивный landing page с современной вёрсткой. Учебный проект 2019, доработан для портфолио.</p>
+            <p data-i18n="projects.p1">Адаптивный landing page с современной вёрсткой.</p>
             <div class="project-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
             <div class="project-links">
               <a href="https://rakhmatmir.github.io/Project1.github.io/" target="_blank" rel="noopener noreferrer">Demo</a>
               <a href="https://github.com/RakhmatMir/Project1.github.io" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </article>
-
           <article class="project-card">
             <div class="project-badge">Web Layout</div>
             <h3>February 2019</h3>
-            <p>Многостраничная вёрстка с детальной проработкой UI. Один из крупнейших учебных проектов.</p>
+            <p data-i18n="projects.p2">Многостраничная вёрстка с детальной проработкой UI.</p>
             <div class="project-tags">
-              <span>HTML</span>
-              <span>CSS</span>
+              <span>HTML</span><span>CSS</span>
             </div>
             <div class="project-links">
               <a href="https://rakhmatmir.github.io/24.02.2019.github.io/" target="_blank" rel="noopener noreferrer">Demo</a>
               <a href="https://github.com/RakhmatMir/24.02.2019.github.io" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </article>
-
           <article class="project-card">
-            <div class="project-badge">Landing Page</div>
-            <h3>April 2019</h3>
-            <p>Landing page с фокусом на структуру блоков и responsive design.</p>
+            <div class="project-badge">GitHub</div>
+            <h3>Profile README</h3>
+            <p data-i18n="projects.p3">Профиль GitHub RU/EN с навыками и контактами.</p>
             <div class="project-tags">
-              <span>HTML</span>
-              <span>CSS</span>
+              <span>Markdown</span><span>GitHub</span>
             </div>
             <div class="project-links">
-              <a href="https://rakhmatmir.github.io/04.04.2019.github.io/" target="_blank" rel="noopener noreferrer">Demo</a>
-              <a href="https://github.com/RakhmatMir/04.04.2019.github.io" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://github.com/RakhmatMir" target="_blank" rel="noopener noreferrer">Profile</a>
+              <a href="https://github.com/RakhmatMir/RakhmatMir" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </article>
         </div>
         <p class="projects-more">
-          Все репозитории —
+          <span data-i18n="projects.all">Все репозитории —</span>
           <a href="https://github.com/RakhmatMir?tab=repositories" target="_blank" rel="noopener noreferrer">github.com/RakhmatMir</a>
         </p>
       </div>
@@ -137,19 +146,23 @@
 
     <section class="section section-alt" id="contact">
       <div class="container contact-inner">
-        <h2 class="section-title">Контакты</h2>
-        <p class="section-text">Открыт к работе, стажировке и freelance-проектам.</p>
+        <h2 class="section-title" data-i18n="contact.title">Контакты</h2>
+        <p class="section-text" data-i18n="contact.text">Открыт к работе, стажировке и freelance-проектам.</p>
         <ul class="contact-list">
+          <li>
+            <span>Telegram</span>
+            <a href="https://t.me/Rmirzaev" target="_blank" rel="noopener noreferrer">@Rmirzaev</a>
+          </li>
           <li>
             <span>GitHub</span>
             <a href="https://github.com/RakhmatMir" target="_blank" rel="noopener noreferrer">@RakhmatMir</a>
           </li>
           <li>
-            <span>Портфолио</span>
+            <span data-i18n="contact.portfolio">Портфолио</span>
             <a href="https://rakhmatmir.github.io">rakhmatmir.github.io</a>
           </li>
           <li>
-            <span>Локация</span>
+            <span data-i18n="contact.location">Локация</span>
             <strong>Fergana, Uzbekistan</strong>
           </li>
         </ul>
@@ -159,7 +172,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Rakhmat · Frontend Developer</p>
+      <p>© 2026 Rakhmat · <span data-i18n="footer.role">Frontend & Automation Developer</span></p>
     </div>
   </footer>
 

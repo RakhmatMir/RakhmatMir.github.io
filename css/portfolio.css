@@ -57,6 +57,40 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   min-height: 68px;
+  gap: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-switch {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-btn {
+  padding: 0.35rem 0.75rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--text);
 }
 
 .logo {
@@ -127,7 +161,7 @@ a:hover {
   margin: 0 0 1.25rem;
 }
 
-.hero h1 span {
+.hero h1 .accent {
   color: var(--accent);
 }
 
@@ -212,7 +246,7 @@ a:hover {
 }
 
 .skills-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-top: 2rem;
 }
 
@@ -316,6 +350,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .nav-right {
+    position: relative;
+  }
+
   .nav-toggle {
     display: flex;
   }
