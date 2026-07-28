@@ -285,6 +285,25 @@ a:hover {
   margin-bottom: 0.75rem;
 }
 
+.project-badge.badge-active {
+  color: #34d399;
+}
+
+.project-badge.badge-dev {
+  color: #fbbf24;
+}
+
+.projects-group-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 2rem 0 0.75rem;
+}
+
+.projects-group-title:first-of-type {
+  margin-top: 1rem;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
