@@ -1,25 +1,50 @@
-# Rakhmat — Portfolio Website
+# Rakhmat — Portfolio
 
-Personal portfolio · RU/EN · Frontend & Automation Developer
+Персональный сайт-портфолио **Rakhmat** (Frontend & Automation Developer).
 
-## Live Demo
+**Live:** [https://rakhmatmir.github.io](https://rakhmatmir.github.io)
 
-**https://rakhmatmir.github.io**
+## О сайте
 
-## About
+- Статический сайт: HTML + CSS + JavaScript
+- Тёмная тема в стиле Developer CV
+- Переключатель языка **RU / EN** (сохранение в `localStorage`)
+- Адаптивная вёрстка (mobile-first)
+- SEO: meta-теги, Open Graph, JSON-LD
 
-Bilingual portfolio (Russian / English) with skills, projects, and contacts.
+## Секции
 
-## Skills
+1. Hero — имя, роль, CTA
+2. About — обо мне
+3. What I Do — направления работы
+4. Skills — навыки и инструменты
+5. Projects — Telegram-боты и web-проекты
+6. Contact — Telegram, GitHub
+7. Footer
 
-- Web: HTML5, CSS3, JavaScript, GitHub Pages
-- Telegram: bots, Mini Apps (TMA), channel management
-- Automation: auto-posting, workflows
-- AI: agents, video, social content
-- Business: accounting, expenses, reporting systems
+## Локальная разработка
 
-## Contact
+Откройте `index.html` в браузере или используйте любой static server:
+
+```bash
+npx serve .
+```
+
+## Структура
+
+```
+├── index.html
+├── css/style.css
+├── js/i18n.js      # переводы RU/EN
+├── js/main.js      # переключатель языка, навигация
+└── README.md
+```
+
+## Контакты
 
 - Telegram: [@Rmirzaev](https://t.me/Rmirzaev)
-- GitHub: [RakhmatMir](https://github.com/RakhmatMir)
-- Location: Fergana, Uzbekistan
+- GitHub: [@RakhmatMir](https://github.com/RakhmatMir)
+
+## Лицензия
+
+© 2026 Rakhmat. All rights reserved.

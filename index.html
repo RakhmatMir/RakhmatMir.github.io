@@ -1,220 +1,352 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rakhmat — Frontend & Automation Developer. Websites, Telegram bots, TMA, AI, automation. Fergana, Uzbekistan." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rakhmat — разработчик frontend и автоматизации из Ферганы. Сайты, Telegram-боты, TMA, AI и бизнес-системы.">
+  <meta name="keywords" content="Rakhmat, frontend developer, Telegram bots, automation, Fergana, GitHub Pages, web developer">
+  <meta name="author" content="Rakhmat">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rakhmatmir.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rakhmatmir.github.io/">
+  <meta property="og:title" content="Rakhmat — Frontend & Automation Developer">
+  <meta property="og:description" content="Websites, Telegram bots, automation & business systems. Open to work.">
+  <meta property="og:locale" content="ru_RU">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rakhmat — Frontend & Automation Developer">
+  <meta name="twitter:description" content="Websites, Telegram bots, automation. Open to work.">
+
   <title>Rakhmat — Frontend & Automation Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/portfolio.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>R</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rakhmat",
+    "url": "https://rakhmatmir.github.io",
+    "jobTitle": "Frontend & Automation Developer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Fergana", "addressCountry": "UZ" },
+    "sameAs": ["https://github.com/RakhmatMir", "https://t.me/Rmirzaev"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Frontend & Automation Development",
+    "url": "https://rakhmatmir.github.io",
+    "provider": { "@type": "Person", "name": "Rakhmat" },
+    "areaServed": "Worldwide",
+    "serviceType": ["Web Development", "Telegram Bots", "Automation"]
+  }
+  </script>
 </head>
-<body class="lang-ru">
-  <header class="header">
-    <nav class="nav container">
-      <a class="logo" href="#home">Rakhmat</a>
-      <div class="nav-right">
-        <div class="lang-switch" role="group" aria-label="Language">
-          <button type="button" class="lang-btn active" data-lang="ru">RU</button>
-          <button type="button" class="lang-btn" data-lang="en">EN</button>
-        </div>
-        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">Rakhmat</a>
+      <nav class="nav" id="nav-menu" aria-label="Main navigation">
+        <a href="#about" data-i18n="nav.about">Обо мне</a>
+        <a href="#services" data-i18n="nav.services">Направления</a>
+        <a href="#skills" data-i18n="nav.skills">Навыки</a>
+        <a href="#projects" data-i18n="nav.projects">Проекты</a>
+        <a href="#contact" data-i18n="nav.contact">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <button type="button" id="lang-toggle" class="lang-btn" aria-label="Switch language">EN</button>
+        <a href="https://t.me/Rmirzaev" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer" data-i18n="hero.cta.telegram">Telegram</a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
         </button>
-        <ul class="nav-links">
-          <li><a href="#about" data-i18n="nav.about">Обо мне</a></li>
-          <li><a href="#skills" data-i18n="nav.skills">Навыки</a></li>
-          <li><a href="#projects" data-i18n="nav.projects">Проекты</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
-        </ul>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero" id="home">
-      <div class="container hero-inner">
-        <p class="hero-label" data-i18n="hero.label">Frontend & Automation Developer</p>
-        <h1><span data-i18n="hero.greeting">Привет, я</span> <span class="accent">Rakhmat</span></h1>
-        <p class="hero-text" data-i18n="hero.text">
-          Создаю сайты, Telegram-ботов, Mini Apps (TMA), автоматизацию и решения с AI.
-          Открыт к работе и новым проектам.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects" data-i18n="hero.cta">Смотреть проекты</a>
-          <a class="btn btn-outline" href="https://t.me/Rmirzaev" target="_blank" rel="noopener noreferrer">Telegram</a>
-          <a class="btn btn-outline" href="https://github.com/RakhmatMir" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <div class="hero__bg"></div>
+      <div class="container hero__inner">
+        <p class="section-label" data-i18n="hero.badge">code // create // automate</p>
+        <h1 class="hero__title" data-i18n="hero.title">Создаю веб и автоматизацию для бизнеса</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">Frontend & Automation Developer из Ферганы.</p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary" data-i18n="hero.cta.projects">Мои проекты</a>
+          <a href="https://t.me/Rmirzaev" class="btn btn--ghost" target="_blank" rel="noopener noreferrer" data-i18n="hero.cta.telegram">Telegram</a>
+          <a href="https://github.com/RakhmatMir" class="btn btn--ghost" target="_blank" rel="noopener noreferrer" data-i18n="hero.cta.github">GitHub</a>
         </div>
-        <p class="hero-location">📍 Fergana, Uzbekistan · <a href="https://t.me/Rmirzaev">@Rmirzaev</a></p>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num">6+</span>
+            <span class="stat__label" data-i18n="hero.stat.projects">проектов</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">3</span>
+            <span class="stat__label" data-i18n="hero.stat.bots">Telegram-бота</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num stat__num--accent">●</span>
+            <span class="stat__label" data-i18n="hero.stat.status">Открыт к работе</span>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- About -->
     <section class="section" id="about">
-      <div class="container">
-        <h2 class="section-title" data-i18n="about.title">Обо мне</h2>
-        <p class="section-text" data-i18n="about.text">
-          Разрабатываю сайты и landing page (HTML, CSS, JavaScript), Telegram-ботов и Mini Apps (TMA),
-          автоматизирую публикации в Telegram и на сайтах. Работаю с AI-агентами, AI-видео и контентом
-          для соцсетей. Создаю системы учёта, расходов и отчётности. Умею работать в команде.
-        </p>
+      <div class="container about">
+        <div class="about__visual">
+          <div class="avatar" aria-hidden="true">
+            <span>R</span>
+          </div>
+        </div>
+        <div class="about__content">
+          <p class="section-label" data-i18n="about.label">обо мне</p>
+          <h2 class="section-title" data-i18n="about.title">Привет, я Rakhmat!</h2>
+          <p data-i18n="about.text1">Я frontend и automation developer.</p>
+          <p data-i18n="about.text2">Работаю с HTML, CSS, JavaScript.</p>
+          <ul class="about__meta">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="about.location">Фергана, Узбекистан</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-i18n="about.status">Открыт к работе</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="skills">
+    <!-- Services -->
+    <section class="section section--alt" id="services">
       <div class="container">
-        <h2 class="section-title" data-i18n="skills.title">Навыки</h2>
+        <p class="section-label section-label--center" data-i18n="services.label">направления</p>
+        <h2 class="section-title section-title--center" data-i18n="services.title">Чем я занимаюсь</h2>
+        <p class="section-subtitle" data-i18n="services.subtitle">Основные области разработки.</p>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card__icon">🌐</div>
+            <h3 data-i18n="services.web.title">Web-разработка</h3>
+            <p data-i18n="services.web.text">Адаптивные сайты.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🤖</div>
+            <h3 data-i18n="services.telegram.title">Telegram & TMA</h3>
+            <p data-i18n="services.telegram.text">Боты и мини-приложения.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">⚡</div>
+            <h3 data-i18n="services.automation.title">Автоматизация</h3>
+            <p data-i18n="services.automation.text">Интеграции и сценарии.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🧠</div>
+            <h3 data-i18n="services.ai.title">AI & Контент</h3>
+            <p data-i18n="services.ai.text">AI-агенты и контент.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">📊</div>
+            <h3 data-i18n="services.business.title">Бизнес-системы</h3>
+            <p data-i18n="services.business.text">Учёт и отчётность.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">👥</div>
+            <h3 data-i18n="services.team.title">Командная работа</h3>
+            <p data-i18n="services.team.text">Совместная разработка.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <p class="section-label section-label--center" data-i18n="skills.label">навыки</p>
+        <h2 class="section-title section-title--center" data-i18n="skills.title">Стек и инструменты</h2>
+        <p class="section-subtitle" data-i18n="skills.subtitle">Технологии каждый день.</p>
         <div class="skills-grid">
-          <article class="skill-card">
-            <h3 data-i18n="skills.web.title">Web-разработка</h3>
-            <p data-i18n="skills.web.desc">HTML5, CSS3, JavaScript, адаптивная вёрстка, GitHub Pages</p>
-          </article>
-          <article class="skill-card">
-            <h3 data-i18n="skills.telegram.title">Telegram & TMA</h3>
-            <p data-i18n="skills.telegram.desc">Telegram-боты, Mini Apps, карточки для продаж, ведение каналов</p>
-          </article>
-          <article class="skill-card">
-            <h3 data-i18n="skills.automation.title">Автоматизация</h3>
-            <p data-i18n="skills.automation.desc">Автопостинг в Telegram и на сайтах, рабочие процессы</p>
-          </article>
-          <article class="skill-card">
-            <h3 data-i18n="skills.ai.title">AI & Контент</h3>
-            <p data-i18n="skills.ai.desc">AI-агенты, AI-видео, статьи и контент для соцсетей</p>
-          </article>
-          <article class="skill-card">
-            <h3 data-i18n="skills.business.title">Бизнес-системы</h3>
-            <p data-i18n="skills.business.desc">Учёт и расходы, отчётность, программы для отчётов</p>
-          </article>
-          <article class="skill-card">
-            <h3 data-i18n="skills.team.title">Работа в команде</h3>
-            <p data-i18n="skills.team.desc">Совместная разработка, коммуникация с заказчиком</p>
-          </article>
+          <div class="skills-group">
+            <h3 data-i18n="skills.frontend">Frontend</h3>
+            <div class="tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h3 data-i18n="skills.bots">Telegram & Bots</h3>
+            <div class="tags">
+              <span>Telegram Bot API</span><span>TMA</span><span>Node.js</span><span>Python</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h3 data-i18n="skills.tools">Инструменты</h3>
+            <div class="tags">
+              <span>Git</span><span>GitHub Pages</span><span>Docker</span><span>VS Code</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h3 data-i18n="skills.other">Дополнительно</h3>
+            <div class="tags">
+              <span>AI Agents</span><span>Automation</span><span>PostgreSQL</span><span>MongoDB</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="projects">
+    <!-- Projects -->
+    <section class="section section--alt" id="projects">
       <div class="container">
-        <h2 class="section-title" data-i18n="projects.title">Проекты</h2>
-        <p class="section-subtitle" data-i18n="projects.subtitle">Сайты, Telegram-боты и проекты на GitHub Pages</p>
+        <p class="section-label section-label--center" data-i18n="projects.label">портфолио</p>
+        <h2 class="section-title section-title--center" data-i18n="projects.title">Мои проекты</h2>
+        <p class="section-subtitle" data-i18n="projects.subtitle">Telegram-боты и web-проекты.</p>
 
-        <h3 class="projects-group-title" data-i18n="projects.bots.title">Telegram-боты</h3>
+        <h3 class="projects-group-title" data-i18n="projects.bots">Telegram-боты</h3>
         <div class="projects-grid">
           <article class="project-card">
-            <div class="project-badge badge-active" data-i18n="projects.bots.active">Активен</div>
-            <h3>LavhFirmbot</h3>
-            <p data-i18n="projects.bots.lavh">Бизнес-бот для фирмы — работает в продакшене.</p>
-            <div class="project-tags">
-              <span>Telegram Bot</span><span>Node.js</span>
+            <div class="project-card__thumb project-card__thumb--bot">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
             </div>
-            <div class="project-links">
-              <a href="https://t.me/LavhFirmbot" target="_blank" rel="noopener noreferrer">@LavhFirmbot</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-badge badge-dev" data-i18n="projects.bots.dev">В разработке</div>
-            <h3>BozorUzGlobal</h3>
-            <p data-i18n="projects.bots.bozor">Маркетплейс-бот — в активной разработке.</p>
-            <div class="project-tags">
-              <span>Telegram Bot</span><span>Marketplace</span>
-            </div>
-            <div class="project-links">
-              <a href="https://t.me/BozorUzGlobal_bot" target="_blank" rel="noopener noreferrer">@BozorUzGlobal_bot</a>
+            <div class="project-card__body">
+              <div class="project-card__head">
+                <h4>@LavhFirmbot</h4>
+                <span class="badge badge--active" data-i18n="projects.active">Активен</span>
+              </div>
+              <p data-i18n="bot.lavh.desc">Рабочий Telegram-бот.</p>
+              <a href="https://t.me/LavhFirmbot" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Открыть</a>
             </div>
           </article>
           <article class="project-card">
-            <div class="project-badge badge-dev" data-i18n="projects.bots.dev">В разработке</div>
-            <h3>OquvOlami</h3>
-            <p data-i18n="projects.bots.oquv">Образовательная платформа в Telegram — в разработке.</p>
-            <div class="project-tags">
-              <span>Telegram Bot</span><span>Education</span>
+            <div class="project-card__thumb project-card__thumb--bot">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
             </div>
-            <div class="project-links">
-              <a href="https://t.me/OquvOlamiBot" target="_blank" rel="noopener noreferrer">@OquvOlamiBot</a>
+            <div class="project-card__body">
+              <div class="project-card__head">
+                <h4>@BozorUzGlobal_bot</h4>
+                <span class="badge badge--dev" data-i18n="projects.dev">В разработке</span>
+              </div>
+              <p data-i18n="bot.bozor.desc">Маркетплейс в Telegram.</p>
+              <a href="https://t.me/BozorUzGlobal_bot" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Открыть</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__thumb project-card__thumb--bot">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__head">
+                <h4>@OquvOlamiBot</h4>
+                <span class="badge badge--dev" data-i18n="projects.dev">В разработке</span>
+              </div>
+              <p data-i18n="bot.oquv.desc">Образовательный бот.</p>
+              <a href="https://t.me/OquvOlamiBot" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Открыть</a>
             </div>
           </article>
         </div>
 
-        <h3 class="projects-group-title" data-i18n="projects.web.title">Web-проекты</h3>
+        <h3 class="projects-group-title" data-i18n="projects.web">Web-проекты</h3>
         <div class="projects-grid">
           <article class="project-card">
-            <div class="project-badge">Landing Page</div>
-            <h3>Project 1</h3>
-            <p data-i18n="projects.p1">Адаптивный landing page с современной вёрсткой.</p>
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
-            <div class="project-links">
-              <a href="https://rakhmatmir.github.io/Project1.github.io/" target="_blank" rel="noopener noreferrer">Demo</a>
-              <a href="https://github.com/RakhmatMir/Project1.github.io" target="_blank" rel="noopener noreferrer">Code</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-badge">Web Layout</div>
-            <h3>February 2019</h3>
-            <p data-i18n="projects.p2">Многостраничная вёрстка с детальной проработкой UI.</p>
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span>
-            </div>
-            <div class="project-links">
-              <a href="https://rakhmatmir.github.io/24.02.2019.github.io/" target="_blank" rel="noopener noreferrer">Demo</a>
-              <a href="https://github.com/RakhmatMir/24.02.2019.github.io" target="_blank" rel="noopener noreferrer">Code</a>
+            <div class="project-card__thumb project-card__thumb--web">01</div>
+            <div class="project-card__body">
+              <h4>Project 1</h4>
+              <p data-i18n="web.p1.desc">Web-проект.</p>
+              <div class="project-card__links">
+                <a href="https://rakhmatmir.github.io/Project1.github.io/" target="_blank" rel="noopener noreferrer" data-i18n="projects.demo">Демо</a>
+                <a href="https://github.com/RakhmatMir/Project1.github.io" target="_blank" rel="noopener noreferrer" data-i18n="projects.code">Код</a>
+              </div>
             </div>
           </article>
           <article class="project-card">
-            <div class="project-badge">GitHub</div>
-            <h3>Profile README</h3>
-            <p data-i18n="projects.p3">Профиль GitHub RU/EN с навыками и контактами.</p>
-            <div class="project-tags">
-              <span>Markdown</span><span>GitHub</span>
+            <div class="project-card__thumb project-card__thumb--web">02</div>
+            <div class="project-card__body">
+              <h4>Feb 2019 Layout</h4>
+              <p data-i18n="web.p2.desc">Layout-проект.</p>
+              <div class="project-card__links">
+                <a href="https://rakhmatmir.github.io/24.02.2019.github.io/" target="_blank" rel="noopener noreferrer" data-i18n="projects.demo">Демо</a>
+                <a href="https://github.com/RakhmatMir/24.02.2019.github.io" target="_blank" rel="noopener noreferrer" data-i18n="projects.code">Код</a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/RakhmatMir" target="_blank" rel="noopener noreferrer">Profile</a>
-              <a href="https://github.com/RakhmatMir/RakhmatMir" target="_blank" rel="noopener noreferrer">Code</a>
+          </article>
+          <article class="project-card">
+            <div class="project-card__thumb project-card__thumb--web">GH</div>
+            <div class="project-card__body">
+              <h4>Profile README</h4>
+              <p data-i18n="web.readme.desc">GitHub Profile README.</p>
+              <div class="project-card__links">
+                <a href="https://github.com/RakhmatMir/RakhmatMir" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Открыть</a>
+              </div>
             </div>
           </article>
         </div>
-        <p class="projects-more">
-          <span data-i18n="projects.all">Все репозитории —</span>
-          <a href="https://github.com/RakhmatMir?tab=repositories" target="_blank" rel="noopener noreferrer">github.com/RakhmatMir</a>
-        </p>
+
+        <div class="section-cta">
+          <a href="https://github.com/RakhmatMir?tab=repositories" class="btn btn--primary" target="_blank" rel="noopener noreferrer" data-i18n="projects.all">Все проекты на GitHub</a>
+        </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="contact">
-      <div class="container contact-inner">
-        <h2 class="section-title" data-i18n="contact.title">Контакты</h2>
-        <p class="section-text" data-i18n="contact.text">Открыт к работе, стажировке и freelance-проектам.</p>
-        <ul class="contact-list">
-          <li>
-            <span>Telegram</span>
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact">
+        <p class="section-label section-label--center" data-i18n="contact.label">контакты</p>
+        <h2 class="section-title section-title--center" data-i18n="contact.title">Давайте работать вместе</h2>
+        <p class="section-subtitle" data-i18n="contact.text">Напишите в Telegram.</p>
+        <a href="https://t.me/Rmirzaev" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer" data-i18n="contact.telegram">Написать в Telegram</a>
+        <div class="contact__grid">
+          <div class="contact__item">
+            <span class="contact__label" data-i18n="contact.location">Локация</span>
+            <span>Fergana, Uzbekistan</span>
+          </div>
+          <div class="contact__item">
+            <span class="contact__label" data-i18n="contact.availability">Статус</span>
+            <span data-i18n="about.status">Открыт к работе</span>
+          </div>
+          <div class="contact__item">
+            <span class="contact__label">Telegram</span>
             <a href="https://t.me/Rmirzaev" target="_blank" rel="noopener noreferrer">@Rmirzaev</a>
-          </li>
-          <li>
-            <span>GitHub</span>
+          </div>
+          <div class="contact__item">
+            <span class="contact__label">GitHub</span>
             <a href="https://github.com/RakhmatMir" target="_blank" rel="noopener noreferrer">@RakhmatMir</a>
-          </li>
-          <li>
-            <span data-i18n="contact.portfolio">Портфолио</span>
-            <a href="https://rakhmatmir.github.io">rakhmatmir.github.io</a>
-          </li>
-          <li>
-            <span data-i18n="contact.location">Локация</span>
-            <strong>Fergana, Uzbekistan</strong>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Rakhmat · <span data-i18n="footer.role">Frontend & Automation Developer</span></p>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="logo">Rakhmat</a>
+        <p data-i18n="footer.tagline">Надёжные решения.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#about" data-i18n="nav.about">Обо мне</a>
+        <a href="#projects" data-i18n="nav.projects">Проекты</a>
+        <a href="#contact" data-i18n="nav.contact">Контакты</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://t.me/Rmirzaev" target="_blank" rel="noopener noreferrer" aria-label="Telegram">TG</a>
+        <a href="https://github.com/RakhmatMir" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
+      </div>
+      <p class="footer__copy" data-i18n="footer.rights">© 2026 Rakhmat.</p>
     </div>
   </footer>
 
-  <script src="js/portfolio.js"></script>
+  <button type="button" id="scroll-top" class="scroll-top" aria-label="Наверх">↑</button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

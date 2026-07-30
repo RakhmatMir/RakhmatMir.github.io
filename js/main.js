@@ -1,81 +1,81 @@
-$('.menu-btn').on('click', function(e) {
-	e.preventDefault;
-	$(this).toggleClass('menu-btn_active');
-	$('.menu-nav').toggleClass('menu-nav_active');
-	$('.block').toggleClass('block_active');
-	$('.span').toggleClass('span-block');
-});
-// arrow-down
-$("#js-arrow-down").on("click", function(e) {
-	e.preventDefault();
-});
-// end arrow-down
-// slides
-    $('.slider').slick({
-        autoplay: true,
-        dots: true,
-        arrows: false,
+(function () {
+  const STORAGE_KEY = "portfolio-lang";
+  const DEFAULT_LANG = "ru";
+
+  function getLang() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved === "en" || saved === "ru" ? saved : DEFAULT_LANG;
+  }
+
+  function setLang(lang) {
+    localStorage.setItem(STORAGE_KEY, lang);
+    document.documentElement.lang = lang;
+    applyTranslations(lang);
+    updateLangButton(lang);
+    document.title = window.I18N[lang]["meta.title"];
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", window.I18N[lang]["meta.description"]);
+  }
+
+  function applyTranslations(lang) {
+    const dict = window.I18N[lang];
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key]) el.textContent = dict[key];
     });
-// slides
-// up
-function slowScroll (id) {
-	var offset = 0;
-	$('html, body').animate ({
-		scrollTop: $(id).offset ().top - offset
-	}, 500);
-	return false;
-};
-var navbarH = $("#js-navbar").height();
-var up = $("body .up");
-$(document).on("scroll", function() {
-	var documentScroll = $(this).scrollTop();
-	if(documentScroll > navbarH) {
-		$(up).show();
-	}else{
-		$(up).hide();
-	}
-});
-// end up
-/* modals 
-==================== */
-var modalsWidth = $(".modal1").innerWidth() / 2;
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (dict[key]) el.setAttribute("placeholder", dict[key]);
+    });
+  }
 
-$(".modal1").css({
-	"marginLeft": "-" + modalsWidth + "px"
-});
-$(".js-show-modals").on("click", function(e){
-	e.preventDefault();
-	$(".js-modal, #js-overley").fadeIn(500);
-	$("body").addClass("open-modal");
-	$(".up").hide();
-});
-$(".js-modal-close, #js-overley").on("click", function(e){
-	e.preventDefault();
-	$(".js-modal, #js-overley").fadeOut(10);
-	$("body").removeClass("open-modal");
-});
+  function updateLangButton(lang) {
+    const btn = document.getElementById("lang-toggle");
+    if (btn) btn.textContent = window.I18N[lang]["lang.switch"];
+  }
 
-/* fiq show
-==================== */
+  function initNav() {
+    const header = document.getElementById("header");
+    const toggle = document.getElementById("nav-toggle");
+    const menu = document.getElementById("nav-menu");
 
-$("#js-arrow-down").on("click", function(e){
-	e.preventDefault();
-	$(".inner-fiq").slideToggle();
-});
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 40);
+    });
 
-/* fiq accordion
-==================== */
+    toggle?.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      toggle.classList.toggle("active");
+    });
 
-$(".js-faq-title").on("click", function(e){
-	e.preventDefault();
-	var $this = $(this)
-		answerID = $this.attr("href");
+    menu?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("open");
+        toggle?.classList.remove("active");
+      });
+    });
+  }
 
-	if( !$this.hasClass("active") ) {
-		$(".js-block-content").slideUp();
-		$(".js-faq-title").removeClass("active");
-	};
+  function initLangToggle() {
+    const btn = document.getElementById("lang-toggle");
+    btn?.addEventListener("click", () => {
+      const next = getLang() === "ru" ? "en" : "ru";
+      setLang(next);
+    });
+  }
 
-	$this.toggleClass("active");
-	$(answerID).slideToggle();
-});
+  function initScrollTop() {
+    const btn = document.getElementById("scroll-top");
+    window.addEventListener("scroll", () => {
+      btn?.classList.toggle("visible", window.scrollY > 500);
+    });
+    btn?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setLang(getLang());
+    initNav();
+    initLangToggle();
+    initScrollTop();
+  });
+})();
